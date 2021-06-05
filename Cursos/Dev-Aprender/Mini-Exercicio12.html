@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function blog(titulo,mensagem,autor,visualizações) {
+            let postagem = { titulo,
+            mensagem,
+            autor,
+            visualizações 
+            }
+            estaAoVivo("NÃO")
+        function estaAoVivo(condição) {
+                if (condição == "SIM") {
+                    console.log(`${postagem.autor} está ao vivo!`)
+                } else if (condição == "NÃO") {
+                    console.log(`${postagem.autor} não está ao vivo!`)
+                } else {
+                    console.log("Não encontrado no sistema!")
+                }
+            }
+            return postagem
+        }
+        
+        
+
+        console.log(blog("SPORT maior de Pernambuco!","O SPORT é o maior de Pernambuco","Vitor Hugo",1000000))
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div-n1" class="div-numeros">
+        <p id="p-digite-n1" class="p-numeros">Digite o primeiro número</p>
+        <input class="input-numeros" type="number" name="n1" id="input-n1" placeholder="Número um">
+        <button class="botao-numeros" id="botao-n1" onclick="botãon1()">Adicionar</button>
+    </div>
+    <div id="div-n2" class="div-numeros" hidden>
+        <p id="p-digite-n2" class="p-numeros">Digite o segundo número</p>
+        <input class="input-numeros" type="number" name="n2" id="input-n2" placeholder="Número Dois">
+        <button class="botao-numeros" id="botao-n2" onclick="botãon2()">Adicionar</button>
+    </div>
+    <div id="operações" hidden>
+        <p class="p-numeros">Digite a operação que deseja:</p></p>
+        <button class="botao" onclick="soma()">Somar</button>
+        <button class="botao" onclick="subtrair()">Subtrair</button>
+        <button class="botao" onclick="dividir()">Dividir</button>
+        <button class="botao" onclick="multiplicar()">Multiplicar</button>
+    </div>
+    <div class="p-numeros" id="resultado" hidden>Olhe no Console</div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

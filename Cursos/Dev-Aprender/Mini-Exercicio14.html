@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Festa VIP</h1>
+    <h2>Bem vindo a festa senhor(a):</h2>
+    <input type="text" name="nomeConvidado" id="nomeConvidado" placeholder="Digite seu nome">
+    <h2>Quem lhe convidou para festa?</h2>
+    <p><input type="text" name="nomeConvidou" id="nomeConvidou"> <input type="submit" value="Verificar se pode entrar" onclick="verificar()"></p>
+    <h1>Você esta permitido entrar?</h1>
+    <p id="resultado">Pesquisando...</p>
+    <script>
+        let txtnomeConvidado = document.getElementById("nomeConvidado")
+        let txtnomeConvidou = document.getElementById("nomeConvidou")
+        let resultado = document.getElementById('resultado')
+
+        let convidados = [
+            {convidado: 'Vitor', convidou: "Vitor"},
+            {convidado: 'Hugo', convidou: "Vitor"},
+            {convidado: 'Mendonça', convidou: "Vitor"},
+            {convidado: 'Queiroz', convidou: "Vitor"},
+            {convidado: "Didi", convidou: "Roberto"}
+    ]
+        function verificar() {
+            nomeConvidado = String(txtnomeConvidado.value)
+            nomeConvidou = String(txtnomeConvidou.value)
+
+            for (pos in convidados) {
+                if (convidados[pos].convidado == nomeConvidado && convidados[pos].convidou == nomeConvidou ) {
+                    console.log("Você pode entrar!")
+                    resultado.innerHTML = "Você pode entrar!"
+                    break
+                   } else {
+                    console.log("Você não pode entrar")
+                    resultado.innerHTML = "Você não pode entrar!"
+                   }
+        }
+    }
+
+    </script>
+</body>
+</html>

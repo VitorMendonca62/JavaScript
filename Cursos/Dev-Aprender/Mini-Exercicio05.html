@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let filme = {
+            titulo: "Vingadores",
+            ano: 2014,
+            diretor: "Tom",
+            personagem: "Homem de ferro"
+        }
+
+        for (var prop in filme) {
+            if (typeof filme[prop] == 'string') {
+                console.log(prop + ": " + filme[prop])
+            }
+        }
+    </script>
+</body>
+
+</html>

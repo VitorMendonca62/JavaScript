@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    background: dodgerblue;
+    font-family: sans-serif
+  }
+  section {
+    background: white;
+    width: 40vw;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.416);
+    margin-top: 8px
+  }
+  h1 {
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 8px
+  }
+  section p {
+      padding-top: 10px;
+  }
+  section p, button {
+      margin-left: 10px;
+  }
+  button {
+    border-radius: 3px;
+    border: none;
+    background-color: #3D82D4;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px;
+}
+button:hover {
+    background-color: #1e4e88;
+}
+footer {
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+#resultado {
+  padding-bottom: 10px ;
+}
+@media (max-width: 1024px) {
+  section {
+    width: 80%
+  }
+}

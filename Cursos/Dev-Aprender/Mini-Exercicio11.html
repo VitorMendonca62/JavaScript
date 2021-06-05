@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let endereco01 = {
+            rua: "a",
+            cidade: "b",
+            cep: 123,
+        }
+        let endereco02 = {
+            rua: "a",
+            cidade: "b",
+            cep: 123,
+        }
+        function iguais(endereco01, endereco02) {
+            return endereco01.rua == endereco02.rua &&
+            endereco01.cidade == endereco02.cidade &&
+            endereco02.cep == endereco01.cep
+        }
+        console.log(iguais(endereco01, endereco02))  
+    </script>
+</body>
+</html>
