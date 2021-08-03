@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 5px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de medidas!</h1>
+    <button onclick="converterMedidas()">Converter</button>
+    <p id="res">Clique no botão acima para iniciar</p>
+    <script>
+        var res = document.getElementById("res")
+        function converterMedidas() {
+            var valorMetros = Number(prompt('Digite a medida em metros!'))
+            res.innerHTML= `<h1> A distância de ${valorMetros} metros, corresponde a...`
+            res.innerHTML+= `<p> ${(valorMetros / 1000).toFixed(3)} quilômetros </p>`
+            res.innerHTML+= `<p> ${(valorMetros / 100).toFixed(3)} hectômetros </p>`
+            res.innerHTML+= `<p> ${(valorMetros / 10).toFixed(3) } decâmetros </p>`
+            res.innerHTML+= `<p> ${(valorMetros * 10).toFixed(2) } decímetros </p>`
+            res.innerHTML+= `<p> ${(valorMetros * 100).toFixed(2)} centrímetros </p>`
+            res.innerHTML+= `<p> ${(valorMetros * 1000).toFixed(2)} milimetros </p>`
+            
+        }
+    </script>
+</body>
+</html>

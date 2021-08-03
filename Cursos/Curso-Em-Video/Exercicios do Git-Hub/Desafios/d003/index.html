@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 5px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e Depois</h1>
+    <button onclick="antecessorESucessor()">Antecessor e sucessor</button>
+    <script>
+        function antecessorESucessor() {
+            var número = Number(prompt("Digite um número qualquer"))
+            alert(`Antes de ${número}, temos ${número - 1}
+Depois de ${número}, temos ${número + 1}. `)
+        }
+    </script>
+</body>
+</html>

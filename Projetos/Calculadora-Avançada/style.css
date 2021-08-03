@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+}
+#linha02 button, #linha03 button, #linha04 button,#linha05 button, #limpar-ultimo-numero {
+    width: 2rem;
+}
+#botao-igual {
+    width: 14rem; 
+}
+button {
+    font-size: 1.5rem;
+    padding: 2rem;
+    padding-right: 2.5rem;
+    margin-bottom: 10px;
+    box-shadow: 2px 3px 2px rgba(255, 56, 56, 0.527);
+    background-color: red;
+    border: none;
+}
+button:hover {
+    background-color: rgb(189, 12, 12);
+}
+input {
+    width: 17.75rem;
+    box-shadow: 2px 3px 2px rgba(255, 56, 56, 0.527);
+    background-color: red;
+    border: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+}

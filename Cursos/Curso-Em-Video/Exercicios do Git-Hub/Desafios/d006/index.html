@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 5px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Conversor de temperaturas !</h1>
+    <button onclick="converterTemperaturas()">Converter</button>
+    <p id="res">Clique no botão acima para iniciar</p>
+    <script>
+        var res = document.getElementById("res")
+
+        function converterTemperaturas() {
+
+            var txtValorCelsius = prompt("Digite o valor em Cesius")
+
+            var valorCelsius = Number(txtValorCelsius)
+            var valorFahrenheit = valorCelsius * 1.8 + 32
+            var valorKelvin = valorCelsius + 273.15
+
+            res.innerHTML = `<h1> A temperatura de ${txtValorCelsius.replace("." , ",")} °C, corresponde a...`
+            res.innerHTML += `<p> ${valorFahrenheit.toFixed(2)} °F (Fahrenheit) </p>`
+            res.innerHTML += `<p> ${valorKelvin.toFixed(2)} K (Kelvin) </p>`
+        }
+    </script>
+</body>
+
+</html>

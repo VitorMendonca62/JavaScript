@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trabalhando com dados v2.0</h1>
+    <button style="padding: 20px;" onclick="trabalharDados()">Clique para começar</button>
+    <p id="resultado">Aqui vai aparecer o resultado...</p>
+    <script>
+        var resultado = document.getElementById("resultado")
+        function trabalharDados() {
+            var nomeUsuário = prompt("Qual o seu nome?")
+            resultado.innerHTML = `Olá, ${nomeUsuário}! É um prazer te conhecer!`
+        }
+
+    </script>
+</body>
+</html>

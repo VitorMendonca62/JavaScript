@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="contanier">
+        <div id="linha01"><input id="resultado" readonly type="text"></div>
+        <div id="linha02">
+            <button onclick="escreveNumero(1)">1</button>
+            <button onclick="escreveNumero(2)">2</button>
+            <button onclick="escreveNumero(3)">3</button>
+            <button onclick="escreveNumero(4)">4</button>
+        </div>
+        <div id="linha03">
+            <button onclick="escreveNumero(5)">5</button>
+            <button onclick="escreveNumero(6)">6</button>
+            <button onclick="escreveNumero(7)">7</button>
+            <button onclick="escreveNumero(8)">8</button>
+        </div>
+        <div id="linha04">
+            <button onclick="escreveNumero(9)">9</button>
+            <button onclick="escreveNumero(0)">0</button>
+            <button onclick="escreveOperadores('+')">+</button>
+            <button onclick="escreveOperadores('-')">-</button>
+        </div>
+        <div id="linha05">
+            <button onclick="escreveOperadores('*')">*</button>
+            <button onclick="escreveOperadores('/')">/</button>
+            <button onclick="escreveDecimal('.')">.</button>
+            <button onclick="limparTela('C')">C</button>
+        </div>
+        <div id="linha06">
+            <button id="botao-igual" onclick="mostrarResultado('=')">=</button>
+            <button id="limpar-ultimo-numero" onclick="limparUltimoNumero('B')">B</button>
+            
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

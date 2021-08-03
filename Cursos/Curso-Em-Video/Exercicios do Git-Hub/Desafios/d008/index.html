@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 5px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular desconto! !</h1>
+    <button onclick="calcularDesconto()">Desconto de 10 %</button>
+    <p id="res">Clique no botão acima para iniciar</p>
+
+    <script>
+    var res = document.getElementById('res')
+    function calcularDesconto() {
+
+        var nomeProduto = prompt("Que produto você está comprando?")
+        var txtValorProduto = prompt(`Quanto custa ${nomeProduto} que você está comprando?`).replace("," , ".")
+        var valorProduto = Number(txtValorProduto)
+        var descontoProduto = (valorProduto / 10).toFixed(2) 
+
+        res.innerHTML= `<h1> Calculando o desconto de 10% para ${nomeProduto}...`
+        res.innerHTML+= `<p> O preço original era de R$ ${txtValorProduto.replace("." ,",")}.</p>`
+        res.innerHTML+= `<p> Você acabou de ganhar R$ ${descontoProduto} de desconto. </p>`
+        res.innerHTML+= `<p>No fim, você vai pagar R$ ${valorProduto - descontoProduto} no produto ${nomeProduto}. </p>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="carregouSite()">
+    <h1>Vários cálculos em JS</h1>
+    <button style="padding: 20px;" onclick="calcularCalculos()">Clique para calcular</button>
+    <p id="resultado">Aqui vai aparecer o resultado...</p>
+    <script>
+        var resultado = document.getElementById("resultado")
+
+        function calcularCalculos() {
+            var numero01 = Number(prompt("Digite um número: "))
+
+            resultado.innerHTML = `<p>O número a ser analisado aqui será o ${numero01}`
+            resultado.innerHTML += "<hr>"
+            resultado.innerHTML += `<p>O seu valor absoluto é ${Math.abs(numero01)}`
+            resultado.innerHTML += `<p>A sua parte inteira é ${Math.trunc(numero01)}`
+            resultado.innerHTML += `<p>O valor inteiro mais próximo é ${Math.round(numero01)}`
+            resultado.innerHTML += `<p>A sua raiz quadrada é ${Math.sqrt(numero01)}` 
+            resultado.innerHTML += `<p>A sua raiz cúbica é ${Math.cbrt(numero01)}`        
+            resultado.innerHTML += `<p>O valor de ${numero01}<sup>2</sup> é ${Math.pow(numero01, 2)}`
+            resultado.innerHTML += `<p>O valor de ${numero01}<sup>3</sup> é ${Math.pow(numero01, 3)}`
+        }
+    </script>
+</body>
+</html>

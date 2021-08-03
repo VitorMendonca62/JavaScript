@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 5px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando troco!</h1>
+    <button onclick="comprarProduto()">Comprar produto</button>
+    <script>
+        function comprarProduto() {
+            var nomeProduto = prompt("Que produto você está comprando?")
+            var valorProduto = Number(prompt(`Quanto custa ${nomeProduto} que você está comprando?`))
+            var valorPago = Number(prompt(`Qual foi o valor que você deu para pagar ${nomeProduto}`))
+            if (valorPago < valorProduto) {
+                alert(`Você está pagando menos que deveria, pague mais R$ ${valorProduto - valorPago} `)
+            } else {
+                alert(`Você comprou ${nomeProduto} que custou R$ ${valorProduto}.
+Deu R$ ${valorPago} em dinheiro e vai receber R$ ${valorPago - valorProduto} de troco.
+Volte sempre! `)
+            }
+        }
+    </script>
+</body>
+</html>
