@@ -1,34 +1,44 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-    background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  background-color: black;
 }
-#linha02 button, #linha03 button, #linha04 button,#linha05 button, #limpar-ultimo-numero {
-    width: 2rem;
+.contanier {
+    border: solid 3px gray;
+    padding: 4px 4px ;
+}
+.botao-numeros,
+.botao-operacoes,
+#limpar-ultimo-numero {
+  width: 2rem;
 }
 #botao-igual {
-    width: 14rem; 
+  width: 14.25rem;
 }
 button {
-    font-size: 1.5rem;
-    padding: 2rem;
-    padding-right: 2.5rem;
-    margin-bottom: 10px;
-    box-shadow: 2px 3px 2px rgba(255, 56, 56, 0.527);
-    background-color: red;
-    border: none;
+  font-size: 1.5rem;
+  padding: 2rem;
+  padding-right: 2.5rem;
+  margin-bottom: 10px;
+  box-shadow: 2px 3px 2px rgba(255, 56, 56, 0.527);
+  background-color: red;
+  border: 0.7px solid gray;
 }
 button:hover {
-    background-color: rgb(189, 12, 12);
+  background-color: rgb(189, 12, 12);
 }
 input {
-    width: 17.75rem;
-    box-shadow: 2px 3px 2px rgba(255, 56, 56, 0.527);
-    background-color: red;
-    border: none;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 1.5rem;
+  width: 12em;
+  box-shadow: 2px 3px 2px rgba(255, 56, 56, 0.527);
+  background-color: red;
+  border: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
 }
