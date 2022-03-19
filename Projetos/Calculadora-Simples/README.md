@@ -9,4 +9,3 @@ Uma calculadora para testar meus conhecimentos em Java Script, ela só funciona 
 ![operação](https://i.imgur.com/EgGOh1a.png)
 
 ![console](https://i.imgur.com/yGEhJj0.png)
-
