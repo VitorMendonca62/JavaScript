@@ -9,7 +9,7 @@ var asQuestoes = [{
     alternativaCorreta: "Todas as stacks"
 },
 {
-    questao: "Quem cricou o JavaScript",
+    questao: "Quem criou o JavaScript",
     respostas: {
         a: "Bill Gates",
         b: "Brendan Eich",

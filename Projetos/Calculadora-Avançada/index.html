@@ -10,33 +10,33 @@
 </head>
 
 <body>
-    <div class="contanier">
-        <div id="linha01"><input id="resultado" readonly type="text"></div>
-        <div id="linha02">
+    <div class="container">
+        <div id="linha01" class="linhas"><input id="resultado" readonly type="text" value="0"></div>
+        <div id="linha02" class="linhas">
             <button class="botao-numeros" onclick="escreveNumero(1)">1</button>
             <button class="botao-numeros" onclick="escreveNumero(2)">2</button>
             <button class="botao-numeros" onclick="escreveNumero(3)">3</button>
             <button class="botao-numeros" onclick="escreveNumero(4)">4</button>
         </div>
-        <div id="linha03">
+        <div id="linha03" class="linhas">
             <button class="botao-numeros" onclick="escreveNumero(5)">5</button>
             <button class="botao-numeros" onclick="escreveNumero(6)">6</button>
             <button class="botao-numeros" onclick="escreveNumero(7)">7</button>
             <button class="botao-numeros" onclick="escreveNumero(8)">8</button>
         </div>
-        <div id="linha04">
+        <div id="linha04" class="linhas">
             <button class="botao-numeros" onclick="escreveNumero(9)">9</button>
             <button class="botao-numeros" onclick="escreveNumero(0)">0</button>
             <button class="botao-numeros" onclick="escreveOperadores('+')">+</button>
             <button class="botao-numeros" onclick="escreveOperadores('-')">-</button>
         </div>
-        <div id="linha05">
+        <div id="linha05" class="linhas">
             <button class="botao-operacoes" onclick="escreveOperadores('*')">*</button>
             <button class="botao-operacoes" onclick="escreveOperadores('/')">/</button>
             <button class="botao-operacoes" onclick="escreveDecimal('.')">.</button>
             <button class="botao-operacoes" onclick="limparTela('C')">C</button>
         </div>
-        <div id="linha06">
+        <div id="linha06" class="linhas">
             <button id="botao-igual" onclick="mostrarResultado('=')">=</button>
             <button id="limpar-ultimo-numero" onclick="limparUltimoNumero('B')">B</button>
             
