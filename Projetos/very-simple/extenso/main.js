@@ -1,16 +1,20 @@
 const valor = prompt("Digite um número");
+const tirarZeroNaPosicao = (valor) => {
+  return valor[0] == 0 ? valor.slice(1, valor.length) : valor;
+};
+const novoValor = tirarZeroNaPosicao(valor);
 let ArrayValor;
-valor <= 9
-  ? console.log(calcularUmDigito(valor))
-  : valor <= 19
-  ? console.log(calcularDoisDigitosMenoresQueVinte(valor))
-  : valor <= 99
-  ? console.log(calcularDoisDigitos(valor))
-  : valor <= 999
-  ? console.log(calcularTresDigitos(valor))
-  : valor <= 9999
-  ? console.log(calcularQuatroDigitos(valor))
-  : false
+novoValor <= 9
+  ? console.log(calcularUmDigito(novoValor))
+  : novoValor <= 19
+  ? console.log(calcularDoisDigitosMenoresQueVinte(novoValor))
+  : novoValor <= 99
+  ? console.log(calcularDoisDigitos(novoValor))
+  : novoValor <= 999
+  ? console.log(calcularTresDigitos(novoValor))
+  : novoValor <= 9999
+  ? console.log(calcularQuatroDigitos(novoValor))
+  : false;
 
 function calcularUmDigito(valor) {
   const umDigito = [
@@ -85,21 +89,29 @@ function calcularTresDigitos(valor) {
     "Oitocentos",
     "Novecentos",
   ];
-  let dezenasInformadas =  ArrayValor[1].concat(ArrayValor[2])
 
   if (valor % 100 === 0) {
-    return valor / 100 == 1 ? Centenas[0] : Centenas[ArrayValor.shift()];
-  } else if (
-    dezenasInformadas < 19 && dezenasInformadas > 9
-  ) {
-    return (
-      Centenas[ArrayValor.shift()] +
-      " e " +
-      calcularDoisDigitosMenoresQueVinte(ArrayValor)
-    );
+    return valor / 100 === 1 ? Centenas[0] : Centenas[ArrayValor.shift()];
   } else {
-    return (
-      Centenas[ArrayValor.shift()] + " e " + calcularDoisDigitos(ArrayValor)
-    );
+    const nomeCentena = Centenas[ArrayValor.shift()];
+    ArrayValor = tirarZeroNaPosicao(ArrayValor);
+
+    let doisDigitos =
+      ArrayValor.length < 2
+        ? ArrayValor[0]
+        : ArrayValor[0].concat(ArrayValor[1]);
+
+    if (doisDigitos < 9) {
+      const nomeDoisDigitos = calcularUmDigito(doisDigitos);
+      return `${nomeCentena} e ${nomeDoisDigitos}`;
+    }
+    if (doisDigitos > 9 && doisDigitos < 20) {
+      const nomeDoisDigitos = calcularDoisDigitosMenoresQueVinte(doisDigitos);
+      return `${nomeCentena} e ${nomeDoisDigitos}`;
+    }
+    if (doisDigitos > 19) {
+      const nomeDoisDigitos = calcularDoisDigitos(doisDigitos);
+      return `${nomeCentena} e ${nomeDoisDigitos}`;
+    }
   }
 }
