@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: rgb(40, 40, 40);
+}
+body,
+main,
+.descricao,
+.tempo,
+.player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main {
+  margin-top: 4.5rem;
+  width: 80%;
+}
+
+#capa {
+  width: 100%;
+  height: 60%;
+}
+
+.descricao {
+  margin-top: 0.8rem;
+  color: rgb(138, 138, 138);
+}
+#nome {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+#cantor {
+  margin: 0.2rem 0 1rem;
+  font-size: 0.8rem;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.duracao,
+#progresso {
+  width: 100%;
+}
+#progresso {
+  height: 16px;
+  background-color: rgb(40, 40, 40);
+}
+
+::-webkit-progress-value {
+  background-color: rgb(202, 202, 202);
+  border-radius: 10px;
+}
+::-webkit-progress-bar {
+  border: 1px solid rgb(138, 138, 138);
+  border-radius: 10px;
+  background-color: rgb(40, 40, 40);
+}
+
+.tempo {
+  justify-content: space-between;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  color: rgb(138, 138, 138);
+}
+.player {
+  margin-top: 2rem;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 3.5rem;
+  color: rgb(138, 138, 138);
+}
+
+@media (min-width: 805px) {
+    main {
+        width: 50%;
+    }
+}
+@media (min-width: 1300px) {
+    main {
+        width: 30%;
+    }
+}
