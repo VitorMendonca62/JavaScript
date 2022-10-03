@@ -31,13 +31,16 @@ function adicionarTarefa() {
 
 function excluirTarefa(caixa, tarefa) {
   const caixaRemovida = document.getElementsByClassName("caixa")[caixa];
-  caixaRemovida.setAttribute("class", "caixa hidden");
+  caixaRemovida.style.display = "none"
+  console.log(caixaRemovida)
+  caixaRemovida.id = ""
   const index = arrayCaixas.indexOf(tarefa);
   index > -1 ? arrayCaixas.splice(index, 1) : false;
 }
 
 function mudarCor(caixa) {
   const elemCaixa = document.getElementById(caixa);
+  console.log(caixa)
 
   elemCaixa.classList.length === 1
     ? elemCaixa.setAttribute("class", "caixa verde")
