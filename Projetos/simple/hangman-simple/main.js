@@ -1,11 +1,12 @@
 const resultado = document.getElementById("resultado");
+const inputResposta = document.getElementById("input-resposta");
+const inputLetra = document.getElementById("input-letras");
 const caixaInformacao = document.getElementById("caixa-informada");
 const caixaErrada = document.getElementById("caixa-errada");
 const outputLetras = document.getElementsByClassName("resultado");
 const letrasPalavra = getPalavra();
 const letrasInformadas = [];
 const letrasErradas = [];
-const respostaInformada = [];
 
 function gerarNumero(min, max) {
   min > max ? ([min, max] = [max, min]) : false;
@@ -192,3 +193,5 @@ function mostrarQueAcertou() {
   alert("Parabéns! Você acertou a palavra, vamos mais uma vez?");
   setInterval(() => location.reload(), 5000);
 }
+
+

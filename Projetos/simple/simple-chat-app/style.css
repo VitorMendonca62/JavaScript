@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+body {
+  background-color: black;
+}
+body,
+form,
+.inputs,
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* chat-app HEADER */
+
+#chat-app header {
+  position: fixed;
+  flex-direction: row;
+  justify-content: left;
+  padding: 0.5rem;
+  width: 49.96vw;
+  border-bottom: 1px solid rgb(221, 217, 217);
+  border-right: 1px solid rgb(221, 217, 217);
+  background-color: white;
+}
+.fa-arrow-left {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: rgb(43, 42, 42);
+  cursor: pointer;
+}
+#chat-app header .user {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+#chat-app .info {
+  margin-left: 0.5rem;
+}
+#chat-app .status {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+/* chat-app main */
+#chat-app {
+  border: 1px solid rgb(221, 217, 217);
+  width: 50vw;
+  height: 80vh;
+  overflow-y: scroll;
+  background-color: rgb(230, 228, 228);
+}
+#chat-app::-webkit-scrollbar {
+  width: 12px;
+}
+#chat-app::-webkit-scrollbar-track {
+  margin-top: 4rem;
+  background-color: rgb(230, 228, 228);
+}
+#chat-app::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
+  border: 3px solid rgb(230, 228, 228);
+}
+#chat-app::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+.chat {
+  margin-top: 4rem;
+}
+.chat .every-menssage {
+  padding: 0.5rem;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+#chat-app .foto-user {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.chat .menssage {
+  margin-left: 0.5rem;
+  padding: 1rem 1.5rem;
+  background-color: white;
+  font-weight: 100;
+  border-radius: 2rem;
+  border-bottom-left-radius: 10px;
+}
+.chat .user {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  padding-top: 0.2rem;
+}
+.chat .slug {
+  max-width: 30vw;
+  overflow-wrap: break-word;
+  font-size: 1rem;
+}
+
+/* Outro lado */
+.chat .outro-lado {
+  display: flex;
+  flex-direction: row-reverse;
+  float: right;
+}
+.outro-lado .menssage {
+  background-color: black;
+  color: white;
+  margin-right: 0.5rem;
+  float: right;
+  text-align: right;
+  border-radius: 3rem;
+  border-bottom-right-radius: 10px;
+}
+
+/* SLUG */
+.mensagem {
+  width: 50vw;
+  height: 5rem;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: white;
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
+}
+#slug,
+.send-button {
+  border: none;
+  height: 2.5rem;
+}
+#slug {
+  width: 80%;
+  outline: none;
+  background-color: white;
+  padding: 0 1.5rem;
+  border: 1px solid rgb(212, 212, 212);
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.send-button {
+  font-size: 1.25rem;
+  width: 21%;
+  background-color: black;
+  color: white;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+  cursor: pointer;
+}
+.send-button:hover {
+  opacity: 0.8;
+}
+#slug::placeholder,
+#slug {
+  font-size: 1rem;
+}

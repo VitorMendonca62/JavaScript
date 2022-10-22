@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="carregarMensagem()" action="main.js" method="POST">
+      <h1>Simple Chat App</h1>
+      <!-- <div class="inputs">
+        <input type="text" id="user" placeholder="Usuario" />
+      </div> -->
+
+      <div id="chat-app">
+        <header>
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          <img src="imgs/icon_luan.jpg" class="foto-user" />
+          <div class="info">
+            <p class="user">Luan Meu Pato no Xadrez</p>
+            <p class="status">Online</p>
+          </div>
+        </header>
+        <main class="chat">
+          <div class="every-menssage">
+            <img src="imgs/icon_vitor.jpg" class="foto-user" />
+            <div class="menssage">
+              <div class="user">Vitinho Minaj</div>
+              <div class="slug">Eae Luan</div>
+            </div>
+          </div>
+          <div class="every-menssage">
+            <img src="imgs/icon_vitor.jpg" class="foto-user" />
+            <div class="menssage">
+              <div class="user">Vitinho Minaj</div>
+              <div class="slug">Visse Pedro?</div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="mensagem">
+        <input type="text" id="slug" placeholder="Mensagem" />
+        <button class="fa fa-paper-plane send-button"></button>
+      </div>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>

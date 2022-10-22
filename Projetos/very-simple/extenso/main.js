@@ -115,3 +115,19 @@ function calcularTresDigitos(valor) {
     }
   }
 }
+
+function calcularQuatroDigitos(valor) {
+  typeof valor === "string" ? (ArrayValor = valor.split("")) : false;
+
+  const milhar = calcularUmDigito(ArrayValor.shift());
+
+  if (valor % 1000 === 0) {
+    return `${milhar} mil`;
+  }
+
+  const stringValor = ArrayValor.toString().replace(",", "").replace(",", "");
+  const centena = calcularTresDigitos(stringValor);
+
+  return `${milhar} mil e ${centena}`;
+}
+

@@ -42,3 +42,24 @@ function limparUltimoNumero() {
     resultado.value = resultado.value.replace(ultimoNumero, "");
   }
 }
+
+function teclaPressioanda(event) {
+  const tecla = event.key;
+
+  if (!isNaN(tecla)) {
+    escreveNumero(tecla);
+  }
+  if (tecla == "*" || tecla == "/" || tecla == "+" || tecla == "-") {
+    escreveOperadores(tecla);
+  }
+  if (tecla === ".") {
+    escreveDecimal();
+  }
+  if (tecla === "Enter") {
+    mostrarResultado();
+  }
+  if (tecla === "Backspace") {
+    limparUltimoNumero();
+  }
+}
+document.addEventListener("keydown", teclaPressioanda);
