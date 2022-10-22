@@ -19,7 +19,7 @@ const headerUser = document.getElementsByClassName("user")[0];
 const query = location.search.slice(1);
 const chaveValor = query.split("=");
 const valor = chaveValor[1];
-const user = valor;
+const user = valor ? valor : "vitor";
 
 const tinyUser = user.toLowerCase();
 const isUser = users.filter((userLaco) => tinyUser === userLaco.user)[0];
@@ -72,4 +72,8 @@ function carregarMensagem(e) {
       chat.innerHTML += mensagem.slugHTML;
     }
   }
+}
+
+function mudarUsuario() {
+  location.search = `user=${ortherUser}`;
 }
