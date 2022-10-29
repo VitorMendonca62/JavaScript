@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div id="linha01" class="linhas"><input id="resultado" readonly type="text" value="0"></div>
-        <div id="linha02" class="linhas">
-            <button class="botao-numeros" onclick="escreveNumero(1)">1</button>
-            <button class="botao-numeros" onclick="escreveNumero(2)">2</button>
-            <button class="botao-numeros" onclick="escreveNumero(3)">3</button>
-            <button class="botao-numeros" onclick="escreveNumero(4)">4</button>
-        </div>
-        <div id="linha03" class="linhas">
-            <button class="botao-numeros" onclick="escreveNumero(5)">5</button>
-            <button class="botao-numeros" onclick="escreveNumero(6)">6</button>
-            <button class="botao-numeros" onclick="escreveNumero(7)">7</button>
-            <button class="botao-numeros" onclick="escreveNumero(8)">8</button>
-        </div>
-        <div id="linha04" class="linhas">
-            <button class="botao-numeros" onclick="escreveNumero(9)">9</button>
-            <button class="botao-numeros" onclick="escreveNumero(0)">0</button>
-            <button class="botao-numeros" onclick="escreveOperadores('+')">+</button>
-            <button class="botao-numeros" onclick="escreveOperadores('-')">-</button>
-        </div>
-        <div id="linha05" class="linhas">
-            <button class="botao-operacoes" onclick="escreveOperadores('*')">*</button>
-            <button class="botao-operacoes" onclick="escreveOperadores('/')">/</button>
-            <button class="botao-operacoes" onclick="escreveDecimal('.')">.</button>
-            <button class="botao-operacoes" onclick="limparTela('C')">C</button>
-        </div>
-        <div id="linha06" class="linhas">
-            <button id="botao-igual" onclick="mostrarResultado('=')">=</button>
-            <button id="limpar-ultimo-numero" onclick="limparUltimoNumero('B')">B</button>
-            
-        </div>
+      <div id="linha01" class="linhas">
+        <input id="resultado" readonly type="text" value="0" />
+      </div>
+      <div id="linha02" class="linhas">
+        <button class="botao-numeros algarismos">1</button>
+        <button class="botao-numeros algarismos">2</button>
+        <button class="botao-numeros algarismos">3</button>
+        <button class="botao-numeros algarismos">4</button>
+      </div>
+      <div id="linha03" class="linhas">
+        <button class="botao-numeros algarismos">5</button>
+        <button class="botao-numeros algarismos">6</button>
+        <button class="botao-numeros algarismos">7</button>
+        <button class="botao-numeros algarismos">8</button>
+      </div>
+      <div id="linha04" class="linhas">
+        <button class="botao-numeros algarismos">9</button>
+        <button class="botao-numeros algarismos">0</button>
+        <button class="botao-numeros algarismos">+</button>
+        <button class="botao-numeros algarismos">-</button>
+      </div>
+      <div id="linha05" class="linhas">
+        <button class="botao-operacoes algarismos">*</button>
+        <button class="botao-operacoes algarismos">/</button>
+        <button class="botao-operacoes" onclick="escreveDecimal()">.</button>
+        <button class="botao-operacoes" onclick="limparTela()">C</button>
+      </div>
+      <div id="linha06" class="linhas">
+        <button id="botao-igual" onclick="mostrarResultado()">=</button>
+        <button id="limpar-ultimo-numero" onclick="limparUltimoNumero()">
+          B
+        </button>
+      </div>
     </div>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
