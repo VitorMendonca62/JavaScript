@@ -13,32 +13,64 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
     <title>Document</title>
   </head>
-
   <body>
-    <header>
-      <h1>LISTA DE TAREFAS</h1>
-      <p>Insira a tarefa que deseja adicionar a sua lista no campo a baixo.</p>
-      <p>Clique no item para marca-lo como concluida.</p>
-      <p>Clique no "X" para remover o item da lista</p>
-    </header>
-    <main>
-      <p>
-        <input
-          type="text"
-          name="to-do"
-          id="input-tarefas"
-          placeholder="Nova tarefa..."
-        />
-        <button onclick="adicionarTarefa()">
-          <i class="fa fa-pencil" aria-hidden="true"></i>
-        </button>
-      </p>
-      <div id="caixas" style="text-align: left"></div>
+    <main class="container">
+      <header>
+        <h1>To do Avançado</h1>
+      </header>
+      <main class="conteudo">
+        <section class="add-tarefa inputs">
+          <div>
+            <p class="label">Adicione a sua tarefa:</p>
+            <div>
+              <input
+                type="text"
+                class="input"
+                name="tarefa"
+                id="tarefa"
+                placeholder="O que você vai fazer?"
+              />
+              <i class="icons fa fa-plus" onclick="adicionarTarefa()"></i>
+            </div>
+          </div>
+        </section>
+        <section class="pesquisar inputs">
+          <div>
+            <div class="div-pesquisa">
+              <p class="label">Pesquisar:</p>
+              <div>
+                <input
+                  type="text"
+                  class="input"
+                  name="pesquisa"
+                  id="pesquisa"
+                  placeholder="Buscar..."
+                />
+                <i class="icons fa fa-delete-left" onclick="excluirPesquisa()"></i>
+              </div>
+            </div>
+            <div>
+              <p class="label">Filtrar:</p>
+              <div>
+                <select name="filtro" id="filtro">
+                  <option value="todos">Todos</option>
+                  <option value="feito">Feitos</option>
+                  <option value="aFazer">À fazer</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="tarefas">
+
+        </section>
+      </main>
     </main>
+
     <script src="main.js"></script>
   </body>
 </html>

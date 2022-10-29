@@ -4,69 +4,108 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-body {
+body,
+.container,
+.container > header,
+.inputs.container,
+.pesquisar > div,
+#tarefas div {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(23, 161, 30);
+  justify-content: center;
 }
-header h1,
-p {
-  text-align: center;
-  margin-bottom: 20px;
-  color: white;
-  font-size: 25px;
+body {
+  background-color: black;
 }
-main {
+.container {
+  background-color: white;
+  padding: 1.5rem;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 0.8rem;
+  width: 30rem;
+}
+.conteudo {
   width: 100%;
 }
-input {
-  width: 70%;
-  height: 35px;
-  appearance: none;
-  border: none;
-  outline: none;
-  padding-left: 10px;
+header {
+  color: rgb(60, 60, 60);
+  border-bottom: 1px solid rgb(219, 219, 219);
+  width: 100%;
+  padding: 0 0 1.2rem;
 }
-
-button {
-  height: 35px;
-  width: 55px;
-  background-color: rgb(6, 54, 9);
-  border: none;
-  color: white;
+.inputs,
+#tarefas {
+  border-bottom: 1px solid rgb(219, 219, 219);
+  padding: 1.2rem 0.6rem;
 }
-button:hover {
-  opacity: 0.6;
-}
-button,
-input {
-  font-size: 20px;
-}
-#caixas {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.caixa {
-  background-color: rgb(16, 151, 175);
-  width: 90%;
-  display: flex;
+.pesquisar > div {
+  flex-direction: row;
   justify-content: space-between;
-  padding: 0 25px;
-  border: rgb(35, 35, 168) solid 1px;
-  margin-top: 10px;
-  border-radius: 25px;
 }
-.caixa p {
-  padding-top: 10px;
+.div-pesquisa {
+  border-right: 2px solid rgb(219, 219, 219);
+  padding-right: 5%;
 }
-.hidden {
-  display: none;
+.label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
-.verde {
-  background-color: rgb(14, 102, 18);
+.input,
+#filtro {
+  width: 13rem;
+  padding: 0.4rem 0.5rem;
+  outline: none;
+  border: 2px solid rgb(219, 219, 219);
+  color: rgb(60, 60, 60);
 }
-.x {
-  width: 2rem;
+.input[id="pesquisa"] {
+  width: 12rem;
+}
+#filtro {
+  width: 8rem;
+}
+.input,
+.icons,
+#filtro {
+  border-radius: 0.3rem;
+}
+.icons {
+  border: #102f5e 2px solid;
+  color: #102f5e;
+  padding: 0.34rem 0.6rem;
+  margin-left: 0.3rem;
+  font-size: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.icons:hover {
+  color: white;
+  background-color: #102f5e;
+}
+#tarefas,
+#tarefas > div {
+  border-bottom: 1px solid rgb(219, 219, 219);
+  padding: 1.2rem 0.6rem;
+  transition: 0.3s;
+}
+#tarefas > div,
+#tarefas > div div {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.concluido {
+  background-color: #395169;
+  color: white;
+  transition: 0.3s;
+}
+.concluido p {
+  text-decoration: line-through;
+  transition: 0.3s;
+}
+.concluido .icons {
+  background-color: white;
+}
+.concluido .icons:hover {
+  background-color: #102f5e;
 }
