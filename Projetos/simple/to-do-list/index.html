@@ -24,7 +24,7 @@
       </header>
       <main class="conteudo">
         <section class="add-tarefa inputs">
-          <div>
+          <div id="divAddTask">
             <p class="label">Adicione a sua tarefa:</p>
             <div>
               <input
@@ -37,6 +37,18 @@
               <i class="icons fa fa-plus" onclick="adicionarTarefa()"></i>
             </div>
           </div>
+          <div class="edita-tarefa" id="edita-tarefa" style="display: none;">
+            <p class="label">Edite sua tarefa:</p>
+            <div>
+              <input
+                type="text"
+                class="input"
+                name="edit-tarefa"
+                id="edit-tarefa"
+              />
+              <i class="icons fa-solid fa-check-double" onclick="enviarEditTask()"></i>
+            </div>
+            <button class="cancelar" onclick="cancelarEditTask()">Cancelar</button>
         </section>
         <section class="pesquisar inputs">
           <div>
