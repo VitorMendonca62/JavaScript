@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+    border: 1px solid red;
+}
+.card {
+  display: inline-block;
+  width: 6rem;
+  height: 200px;
+  perspective: 1000px; 
+}
+.carder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.8s;
+  transform-style: preserve-3d;
+}
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: red;
+  height: 7rem;
+  width: 6rem;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
